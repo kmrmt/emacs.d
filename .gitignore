@@ -1,0 +1,5 @@
+ac-comphist.dat
+auto-save-list
+*.elc
+el-get/*
+!el-get/local-recipes/

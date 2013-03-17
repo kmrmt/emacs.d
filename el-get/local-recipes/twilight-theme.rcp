@@ -1,0 +1,4 @@
+(:name twilight-theme
+       :type github
+       :website "https://github.com/developernotes/twilight-theme"
+       :pkgname "developernotes/twilight-theme")
