@@ -43,7 +43,7 @@
 ;;; anything-c-moccurの設定
 (require 'anything-c-moccur)
 ;; カスタマイズ可能変数の設定(M-x customize-group anything-c-moccur でも設定可能)
-(setq anything-c-moccur-anything-idle-delay 0.2 ;`anything-idle-delay'
+(setq anything-c-moccur-anything-idle-delay 0.1 ;`anything-idle-delay'
       anything-c-moccur-higligt-info-line-flag t ; `anything-c-moccur-dmoccur'などのコマンドでバッファの情報をハイライトする
       anything-c-moccur-enable-auto-look-flag t ; 現在選択中の候補の位置を他のwindowに表示する
       anything-c-moccur-enable-initial-pattern t) ; `anything-c-moccur-occur-by-moccur'の起動時にポイントの位置の単語を初期パターンにする
@@ -55,7 +55,7 @@
           '(lambda ()
              (local-set-key (kbd "O") 'anything-c-moccur-dired-do-moccur-by-moccur)))
 
-(setq anything-sources (list anything-c-source-buffers
+(setq anything-sources (list anything-c-source-buffers+
                              anything-c-source-recentf
                              anything-c-source-bookmarks
                              anything-c-source-man-pages

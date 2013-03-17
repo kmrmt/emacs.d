@@ -2,17 +2,22 @@
 (if (or run-cocoa run-carbon)
     (menu-bar-mode 1) (menu-bar-mode 0))
 
+;; disable visual bell
 (setq visible-bell nil)
 
 (modify-frame-parameters (selected-frame) '((alpha . 90 )))
 
+;; show line & column number
 (line-number-mode t)
 (column-number-mode t)
 
+;; show time
 (display-time)
 
+;; show battery status
 (display-battery-mode t)
 
+;; highlight current line
 (defface hlline-face
   '((((class color)
       (background dark))
@@ -25,6 +30,7 @@
 (setq hl-line-face 'hlline-face)
 (global-hl-line-mode)
 
+;; powerline
 (el-get 'sync '(powerline))
 (require 'powerline)
 ;; バッファ情報の書式
