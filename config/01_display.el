@@ -2,6 +2,9 @@
 (if (or run-cocoa run-carbon)
     (menu-bar-mode 1) (menu-bar-mode 0))
 
+;; tab width
+(setq tab-width 4)
+
 ;; disable visual bell
 (setq visible-bell nil)
 
