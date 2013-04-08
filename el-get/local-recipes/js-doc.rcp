@@ -1,0 +1,5 @@
+(:name js-doc
+       :website "https://github.com/mooz/js-doc"
+       :description ""
+       :type github
+       :pkgname "mooz/js-doc")
