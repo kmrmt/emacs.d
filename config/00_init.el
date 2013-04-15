@@ -74,3 +74,6 @@
 ;; key remap ¥ to \
 (if run-darwin
     (define-key global-map [?¥] [?\\]))
+
+(set-language-environment "Japanese")
+
