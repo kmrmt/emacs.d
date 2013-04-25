@@ -18,8 +18,12 @@
 (display-time)
 
 ;; show battery status
-(if run-darwin
-    (display-battery-mode t))
+(require 'battery)
+(when (and battery-status-function
+           (not (string-match-p "N/A"
+                                (battery-format "%B"
+                                                (funcall battery-status-function)))))
+  (display-battery-mode t))
 
 ;; highlight current line
 (defface hlline-face
