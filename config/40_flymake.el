@@ -5,6 +5,15 @@
 (global-set-key "\M-p" 'flymake-goto-prev-error)
 (global-set-key "\M-n" 'flymake-goto-next-error)
 (global-set-key "\C-cd" 'flymake-popup-err-message)
+(defun flymake-get-make-cmdline (source base-dir)
+  (list "make"
+        (list "-s"
+              "-C"
+              base-dir
+              (concat "CHK_SOURCES=" source)
+              "SYNTAX_CHECK_MODE=1"
+              "LANG=C"
+              "check-syntax")))
 
 (require 'popup)
 (defun flymake-popup-err-message ()
@@ -55,6 +64,6 @@
     (list cmd (append opts (list local-file)))))
 
 (defun flymake-simple-make-or-generic-init (cmd &optional opts)
-  (if (file-exists-p "Makefike")
+  (if (file-exists-p "Makefile")
       (flymake-simple-make-init)
     (flymake-simple-generic-init cmd opts)))
