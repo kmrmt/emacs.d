@@ -1,6 +1,3 @@
-(el-get 'sync '(auto-complete-clang))
-(require 'auto-complete-clang)
-
 (require 'flymake)
 (defun flymake-cc-init ()
   (flymake-simple-make-or-generic-init
@@ -13,6 +10,5 @@
 
 (add-hook 'c++-mode-hook
 	  '(lambda ()
-	     (add-to-list 'ac-sources 'ac-source-clang)
 	     (add-to-list 'ac-sources 'ac-source-c++-keywords)
              (flymake-mode t)))
