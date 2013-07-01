@@ -22,6 +22,9 @@
 (add-hook 'haskell-mode-hook
 	  (lambda () (ghc-init)))
 
+;;(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
+;;(add-hook 'haskell-mode-hook 'turn-on-haskell-simple-indent)
 
 (require 'anything)
 (require 'anything-config)
@@ -57,3 +60,4 @@
 (add-hook 'haskell-mode-hook
   (lambda()
     (define-key haskell-mode-map (kbd "C-M-d") 'anything-ghc-browse-document)))
+
