@@ -1,4 +1,5 @@
 (el-get 'sync '(haskell-mode))
+(el-get 'sync '(ghc-mod))
 (require 'haskell-mode)
 (require 'haskell-cabal)
 
