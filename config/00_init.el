@@ -71,9 +71,14 @@
 ;; enable auto revert
 (global-auto-revert-mode 1)
 
-;; key remap ¥ to \
+;; key remap 促 to \
 (if run-darwin
-    (define-key global-map [?¥] [?\\]))
+    (define-key global-map [?促] [?\\]))
 
+;; language and character code
 (set-language-environment "Japanese")
-
+(prefer-coding-system 'utf-8-unix)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-buffer-file-coding-system 'utf-8)
+(set-default-coding-systems 'utf-8)
