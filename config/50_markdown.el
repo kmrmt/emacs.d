@@ -1,4 +1,3 @@
-(el-get 'sync '(markdown-mode))
 (require 'markdown-mode)
 
 (setq auto-mode-alist

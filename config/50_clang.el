@@ -1,6 +1,5 @@
 (if run-darwin
     '(lambda ()
-       (el-get 'sync '(auto-complete-clang))
        
        (require 'auto-complete-clang)
        (add-hook 'c-mode-hook

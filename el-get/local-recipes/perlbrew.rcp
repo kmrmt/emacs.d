@@ -1,5 +1,0 @@
-(:name perlbrew
-       :website "https://github.com/kentaro/perlbrew.el"
-       :description ""
-       :type github
-       :pkgname "kentaro/perlbrew.el")

@@ -1,8 +1,6 @@
 (custom-set-variables '(js2-rebind-eol-bol-keys nil))
 
-(el-get 'sync '(js2-mode))
 (require 'js2-mode)
-(el-get 'sync '(js2-highlight-vars-mode))
 (require 'js2-highlight-vars)
 
 (add-to-list 'auto-mode-alist '("\\.js" . js2-mode))
@@ -24,7 +22,6 @@
                  (js2-highlight-vars-mode))))
 
 ;; js-doc
-(el-get 'sync '(js-doc))
 (require 'js-doc)
 (add-hook 'js2-mode-hook
           '(lambda ()

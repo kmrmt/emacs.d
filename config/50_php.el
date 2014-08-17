@@ -1,5 +1,3 @@
-(el-get 'sync '(php-mode))
-
 (require 'php-mode)
 (setq php-mode-force-pear t)
 (add-hook 'php-mode-hook

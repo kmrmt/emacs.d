@@ -1,5 +1,3 @@
-(el-get 'sync '(c-eldoc))
-
 (require 'c-eldoc)
 (add-hook 'c-mode-common-hook
           (lambda ()
@@ -9,7 +7,6 @@
             (local-set-key (kbd "C-c C-c") 'compile)))
 
 ;; google c style
-(el-get 'sync '(google-c-style))
 (require 'google-c-style)
 (add-hook 'c-mode-common-hook 'google-set-c-style)
 (add-hook 'c-mode-common-hook 'google-make-newline-indent)

@@ -1,5 +1,0 @@
-(:name pod-mode
-       :website "https://github.com/renormalist/emacs-pod-mode"
-       :description "the Plain Old Documentation format of Perl."
-       :type github
-       :pkgname "renormalist/emacs-pod-mode")

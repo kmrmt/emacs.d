@@ -1,4 +1,0 @@
-(:name replace-colorthemes
-               :type github
-               :pkgname "emacs-jp/replace-colorthemes"
-               :website "https://github.com/emacs-jp/replace-colorthemes")

@@ -1,5 +1,0 @@
-(:name "tmt-mode"
-       :website "https://github.com/yoshiki/tmt-mode"
-       :description "a major mode for editing files written in Text::MicroTemplate syntax."
-       :type github
-       :pkgname "yoshiki/tmt-mode")

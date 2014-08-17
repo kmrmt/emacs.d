@@ -1,6 +1,3 @@
-(el-get 'sync '(helm))
-(el-get 'sync '(helm-migemo))
-
 (require 'helm-config)
 (require 'helm-migemo)
 (global-set-key "\C-ca" 'helm)

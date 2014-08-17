@@ -1,6 +1,3 @@
-(el-get 'sync '(flymake))
-(el-get 'sync '(flymake-extension))
-
 (require 'flymake)
 (global-set-key "\M-p" 'flymake-goto-prev-error)
 (global-set-key "\M-n" 'flymake-goto-next-error)
@@ -32,7 +29,6 @@
 (set-face-background 'flymake-warnline "orange3")
 
 ;; display error message
-(el-get 'sync '(fringe-helper))
 (require 'fringe-helper)
 
 (defvar flymake-fringe-overlays nil)

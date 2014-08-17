@@ -1,4 +1,3 @@
-(el-get 'sync '(mmm-mode))
 (require 'mmm-mode)
 (setq mmm-global-mode 'maybe)
 
