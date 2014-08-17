@@ -1,0 +1,3 @@
+[submodule "vendor/apribase-theme"]
+	path = vendor/apribase-theme
+	url = https://github.com/yymm/.emacs.d.git
