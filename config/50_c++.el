@@ -1,14 +1,12 @@
-(require 'flymake)
-(defun flymake-cc-init ()
-  (flymake-simple-make-or-generic-init
-   "g++" '("-Wall" "-Wextra" "-pedantic" "-fsyntax-only")))
+(require 'flycheck)
 
-(push '("\\.cc$"  flymake-cc-init) flymake-allowed-file-name-masks)
-(push '("\\.cpp$" flymake-cc-init) flymake-allowed-file-name-masks)
-(push '("\\.h$"   flymake-cc-init) flymake-allowed-file-name-masks)
-(push '("\\.hpp$" flymake-cc-init) flymake-allowed-file-name-masks)
-
-(add-hook 'c++-mode-hook
-	  '(lambda ()
-	     (add-to-list 'ac-sources 'ac-source-c++-keywords)
-             (flymake-mode t)))
+(flycheck-define-checker c/c++
+  "A C/C++ checker using g++."
+  :command ("g++" "-Wall" "-Wextra" source)
+  :error-patterns  ((error line-start
+                           (file-name) ":" line ":" column ":" " エラー: " (message)
+                           line-end)
+                    (warning line-start
+                           (file-name) ":" line ":" column ":" " 警告: " (message)
+                           line-end))
+  :modes (c-mode c++-mode))
