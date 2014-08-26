@@ -1,1 +1,1 @@
-(load-theme 'apribase t)
+(load-theme 'molokai t)

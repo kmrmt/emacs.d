@@ -1,3 +1,7 @@
+;;; 01_display.el --- display settings
+;;; Commentary:
+;;; 
+;;; Code:
 ;; menu bar disable CUI mode
 (if (or run-cocoa run-carbon)
     (menu-bar-mode 1) (menu-bar-mode 0))
@@ -26,13 +30,14 @@
   (display-battery-mode t))
 
 ;; highlight current line
+(require 'hl-line)
 (defface hlline-face
   '((((class color)
       (background dark))
-     (:background "dark slate gray"))
+     (:background "#222244"))
     (((class color)
       (background light))
-     (:background  "ForestGreen"))
+     (:background "LightSteelBlue1"))
     (t ()))
   "*Face used by hl-line.")
 (setq hl-line-face 'hlline-face)
@@ -41,7 +46,6 @@
 ;; powerline
 (if (or run-carbon run-cocoa)
     '(lambda ()
-       (el-get 'sync '(powerline))
        (require 'powerline)
        ;; バッファ情報の書式
        (defpowerline buffer-id (propertize (car (propertized-buffer-identification "%b"))
