@@ -33,6 +33,7 @@
 (depends-on "js-doc")
 (depends-on "json-mode")
 (depends-on "markdown-mode")
+(depends-on "owdriver")
 (depends-on "php-mode")
 (depends-on "paredit")
 (depends-on "rainbow-delimiters")
