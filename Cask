@@ -47,4 +47,4 @@
 (depends-on "tango-2-theme")
 (depends-on "twilight-theme")
 (depends-on "pastels-on-dark-theme")
-(depends-on "molokai" :git "https://github.com/hbin/molokai-theme.git")
+(depends-on "molokai-theme")
