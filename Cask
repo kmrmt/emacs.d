@@ -40,6 +40,7 @@
 (depends-on "ruby-mode")
 (depends-on "ruby-block")
 (depends-on "ruby-end")
+(depends-on "scala-mode2")
 (depends-on "web-mode")
 
 ;; custom theme
