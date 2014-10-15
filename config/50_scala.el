@@ -25,18 +25,6 @@
 
   ;; and other bindings here
 ))
-(add-hook 'scala-mode-hook '(lambda ()
-  (require 'whitespace)
-
-  ;; clean-up whitespace at save
-  (make-local-variable 'before-save-hook)
-  (add-hook 'before-save-hook 'whitespace-cleanup)
-
-  ;; turn on highlight. To configure what is highlighted, customize
-  ;; the *whitespace-style* variable. A sane set of things to
-  ;; highlight is: face, tabs, trailing
-  (whitespace-mode)
-  ))
 
 ;; For complex scala files
 (setq max-lisp-eval-depth 50000)
