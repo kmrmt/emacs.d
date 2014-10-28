@@ -40,7 +40,8 @@
      (:background "LightSteelBlue1"))
     (t ()))
   "*Face used by hl-line.")
-(setq hl-line-face 'hlline-face)
+;;(setq hl-line-face 'hlline-face)
+(setq hl-line-face 'underline)
 (global-hl-line-mode)
 
 ;; powerline
