@@ -1,7 +1,3 @@
-;;; 01_display.el --- display settings
-;;; Commentary:
-;;; 
-;;; Code:
 ;; menu bar disable CUI mode
 (if (or run-cocoa run-carbon)
     (menu-bar-mode 1) (menu-bar-mode 0))

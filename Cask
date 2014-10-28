@@ -8,6 +8,7 @@
 (depends-on "auto-complete")
 (depends-on "auto-async-byte-compile")
 (depends-on "cask")
+(depends-on "exec-path-from-shell")
 (depends-on "fringe-helper")
 (depends-on "helm")
 (depends-on "helm-git-grep")
@@ -17,6 +18,7 @@
 (depends-on "popup")
 (depends-on "popwin")
 (depends-on "undo-tree")
+(depends-on "use-package")
 
 ;; prog modes
 (depends-on "c-eldoc")
@@ -27,6 +29,10 @@
 (depends-on "flycheck")
 (depends-on "flycheck-pos-tip")
 (depends-on "google-c-style")
+(depends-on "go-autocomplete")
+(depends-on "go-direx")
+(depends-on "go-eldoc")
+(depends-on "go-mode")
 (depends-on "haskell-mode")
 (depends-on "js2-mode")
 (depends-on "js2-highlight-vars" :git "https://github.com/skiviharju/js2-highlight-vars-mode.git")

@@ -1,6 +1,6 @@
 (require 'popwin)
-(setq display-buffer-function 'popwin:display-buffer)
+(popwin-mode 1)
 
-(setq anything-samewindow nil)
+(setq helm-samewindow nil)
 (push '("helm" :height 20) popwin:special-display-config)
 (push '(" *auto-async-byte-compile*" :height 14 :position bottom :noselect t) popwin:special-display-config)

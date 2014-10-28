@@ -1,3 +1,6 @@
+;;; init.el --- emacs entry point
+;;; Commentary:
+;;; Code:
 (setq load-path
       (append (list (expand-file-name "~/.emacs.d/site-lisp")
                     (expand-file-name "~/.emacs.d/vendor"))
@@ -34,3 +37,5 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+;;; init.el ends here
