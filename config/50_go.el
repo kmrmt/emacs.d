@@ -1,18 +1,20 @@
 (add-to-list 'exec-path (expand-file-name (concat (getenv "GOPATH") "/bin")))
 
 (require 'go-mode)
-(require 'go-autocomplete)
 (require 'auto-complete-config)
+(require 'go-autocomplete)
 (require 'go-eldoc)
 
-(add-hook 'before-save-hook 'gofmt-before-save)
-(add-hook 'go-mode-hook (lambda()
+(add-hook 'go-mode-hook '(lambda()
+                          (setq tab-width 2)
+                          (setq indent-tabs-mode 1)
                           (local-set-key (kbd "M-.") 'godef-jump)
                           (local-set-key (kbd "C-c C-r") 'go-remove-unused-imports)
                           (local-set-key (kbd "C-M-a") 'beginning-of-defun)
                           (local-set-key (kbd "C-M-h") 'mark-defun)
                           (local-set-key (kbd "C-x n d") 'narrow-to-defun)
                           (local-set-key (kbd "C-c C-d") 'godef-describe)))
+(add-hook 'before-save-hook 'gofmt-before-save)
 (add-hook 'go-mode-hook 'go-eldoc-setup)
 
 (require 'go-direx)
