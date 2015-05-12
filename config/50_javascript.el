@@ -1,12 +1,8 @@
 (custom-set-variables '(js2-rebind-eol-bol-keys nil))
 
 (require 'js2-mode)
-(require 'js2-highlight-vars)
 
 (add-to-list 'auto-mode-alist '("\\.js" . js2-mode))
-
-(set-face-underline-p 'js2-highlight-vars-face t)
-(set-face-underline 'js2-highlight-vars-face "#7F7FFF")
 
 ;; free C-m for default function, 'newline-and-indent
 (define-key js2-mode-map (kbd "C-m") nil)
@@ -17,9 +13,7 @@
              (setq js-indent-level 4
                    js-expr-indent-offset 4
                    indent-tabs-mode nil)
-             (set (make-local-variable 'indent-line-function) 'js-indent-line)
-             (if (featurep 'js2-highlight-vars)
-                 (js2-highlight-vars-mode))))
+             (set (make-local-variable 'indent-line-function) 'js-indent-line)))
 
 ;; js-doc
 (require 'js-doc)

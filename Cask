@@ -35,7 +35,6 @@
 (depends-on "go-mode")
 (depends-on "haskell-mode")
 (depends-on "js2-mode")
-(depends-on "js2-highlight-vars" :git "https://github.com/skiviharju/js2-highlight-vars-mode.git")
 (depends-on "js-doc")
 (depends-on "json-mode")
 (depends-on "markdown-mode")
