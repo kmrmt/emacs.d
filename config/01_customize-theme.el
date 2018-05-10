@@ -1,1 +1,7 @@
-(load-theme 'molokai t)
+;(use-package aurora-theme :ensure t :defer t)
+(use-package color-theme-sanityinc-tomorrow :ensure t :defer t)
+(use-package gruvbox-theme :ensure t :defer t)
+(use-package material-theme :ensure t :defer t)
+(use-package molokai-theme :ensure t)
+(use-package monokai-theme :ensure t :defer t)
+(use-package zenburn-theme :ensure t :defer t)

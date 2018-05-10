@@ -1,41 +1,48 @@
 ;;; init.el --- emacs entry point
 ;;; Commentary:
 ;;; Code:
-(setq load-path
-      (append (list (expand-file-name "~/.emacs.d/site-lisp")
-                    (expand-file-name "~/.emacs.d/vendor"))
-              load-path))
 
-(if (file-exists-p "~/.cask/cask.el")
-    (require 'cask "~/.cask/cask.el")
-  (require 'cask))
-(cask-initialize)
+(require 'package)
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
+(defmacro append-to-list (to lst)
+  `(progn (mapcar (lambda (arg) (add-to-list ,to arg)) ,lst)
+	  (eval ,to)))
+
+(append-to-list 'package-archives
+                '(("gnu" . "http://elpa.gnu.org/packages/")
+                  ("melpa-stable" . "https://stable.melpa.org/packages/")
+                  ("melpa" . "http://melpa.org/packages/")
+                  ("mamalade" . "https://marmalade-repo.org/packages/")
+                  ("org" . "http://orgmode.org/elpa/")))
+
+;; use-package
+(when (not (package-installed-p 'use-package))
+  (package-refresh-contents)
+  (package-install 'use-package))
+(require 'use-package)
 
 ;; init
-(require 'init-loader)
-(init-loader-load (expand-file-name "~/.emacs.d/config/"))
-
-;; filenome prefix:
-;; - 00 : fundamental settings
-;; - 10 : pre load settings
-;; - 20 : custom functions
-;; - 30 : additional functions
-;; - 40 : minor mode settings
-;; - 50 : major mode settings
-;; - 90 : post load settings
+(use-package init-loader
+  :ensure t
+  :config
+  (init-loader-load (expand-file-name "~/.emacs.d/config/")))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("9fd20670758db15cc4d0b4442a74543888d2e445646b25f2755c65dcd6f1504b" default)))
- '(flycheck-display-errors-function (function flycheck-pos-tip-error-messages))
- '(js2-rebind-eol-bol-keys nil))
+ '(js2-rebind-eol-bol-keys nil)
+ '(package-selected-packages
+   (quote
+    (flycheck-pyflakes jedi use-package init-loader helm))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-;;; init.el ends here

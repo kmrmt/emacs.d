@@ -1,4 +1,4 @@
-(require 'flycheck)
+(use-package flycheck)
 
 (flycheck-define-checker c/c++
   "A C/C++ checker using g++."
@@ -7,6 +7,6 @@
                            (file-name) ":" line ":" column ":" " エラー: " (message)
                            line-end)
                     (warning line-start
-                           (file-name) ":" line ":" column ":" " 警告: " (message)
-                           line-end))
+                             (file-name) ":" line ":" column ":" " 警告: " (message)
+                             line-end))
   :modes (c-mode c++-mode))
